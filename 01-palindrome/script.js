@@ -14,14 +14,22 @@
 */
 
 function palindrome(str) {
-    // Напишите код здесь
+    const str1 = str.replace(/[^a-zа-яё]/gi, '');
+    const reverseline = str1.split('').reverse().join('');
+    if (str1.toLowerCase() === reverseline.toLowerCase()) {
+        return true;
+    } else{
+        return false;
+    };
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(palindrome('топот')); // должно быть true
+console.log(palindrome('топот')); //  true
 console.log(palindrome('Saippuakivikauppias')); // true
 console.log(palindrome('привет')); // false
+console.log(palindrome('О, лета тело!')); // true
+console.log(palindrome('')); // true
 
 /*
  * Бонус. Задача для любознательных. Пусть функция принимает на вход любую строку,
