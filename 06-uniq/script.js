@@ -8,11 +8,14 @@
 */
 
 function uniq(arr) {
-    // Напишите код здесь
+    const array = arr.filter((num, index) => {
+      return index === arr.indexOf(num);
+    });
+  return array;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
-
+console.log(uniq([]));
 console.log(uniq([1, 2, 5, 4, 2])); // [1, 2, 5, 4]
 console.log(uniq([3, 3, 3, 5])); // [3, 5]
 console.log(uniq([1, 4, 2, 2, 3, 4, 8])); // [1, 4, 2, 3, 8]
