@@ -9,12 +9,12 @@
 */
 
 function anagram(str1, str2) {
-    if(!str1 || !str2 || str1.length !== str2.length || str1.toLowerCase() === str2.toLowerCase()){
+    if(!str1 || !str2 || str1.length !== str2.length || str1.toLowerCase() === str2.toLowerCase()){ //если сроки разные по длине, идентичны или пусты -> ложь
         return false;   
     }
-    const arr1 = str1.toLowerCase().split('').sort().join('');
+    const arr1 = str1.toLowerCase().split('').sort().join(''); //сортируем обе строки по алфавиту
     const arr2 = str2.toLowerCase().split('').sort().join('');
-    if (arr1 === arr2) {
+    if (arr1 === arr2) { //если отсортированные строки равны -> истина
         return true;
     } else{
         return false;

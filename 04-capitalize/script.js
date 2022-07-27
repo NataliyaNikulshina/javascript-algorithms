@@ -7,16 +7,16 @@
 */
 
 function capitalize(str) {
-    str = str.replace(/\s+/g, ' ');
-    const arr = str.split(' ');
+    str = str.replace(/\s+/g, ' '); //удаляем двойные пробелы из строки
+    const arr = str.split(' '); //делаем массив из слов
     //console.log(arr);
     const arrUp = arr.map(function(strUp){
-        if (!(strUp === '')){
+        if (!(strUp === '')){ //если элемент массива не пуста строка, первый элемент слова преобразовываем в верхний регистр
         strUp = strUp[0].toUpperCase() + strUp.slice(1);
         return strUp;}
     });
 
-    return arrUp.join(' ');
+    return arrUp.join(' '); //выводим массив, преобразовав в строку
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

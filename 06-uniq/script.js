@@ -8,7 +8,7 @@
 */
 
 function uniq(arr) {
-    const array = arr.filter((num, index) => {
+    const array = arr.filter((num, index) => { //фильтруем массив, сравнивая порядковый номер эл-та с первым индексом эл-та
       return index === arr.indexOf(num);
     });
   return array;

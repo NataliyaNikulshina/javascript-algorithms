@@ -9,10 +9,16 @@
 */
 
 function sumOfTwo(arr, sum) {
-    // Напишите код здесь
+    for (let i=0; i<arr.length; i++){ //перебираем массив и складываем его с другими числами из массива
+        for (let j=0; j<arr.length; j++){
+            if(i!=j && arr[i]+arr[j]===sum) return true;
+        }
+    }
+    return false;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(sumOfTwo([1, 2, 3, 4, 5], 4)); // true (так как 1 + 3 === 4)
 console.log(sumOfTwo([1, 2, 3, 4, 5], 100)); // false
+console.log(sumOfTwo([1, 0, 5, 7, 4], 2)); //false

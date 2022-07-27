@@ -10,13 +10,13 @@
 */
 
 function findVowels(str) {
-    str = str.toLowerCase();
+    str = str.toLowerCase(); //убираем верхний регистр
     const vowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
-    const arr = str.split('');
+    const arr = str.split(''); //создаем массив из заданной строки
     let num = 0;
     arr.forEach(function(letter) { 
-        if (vowels.includes(letter)){
-        num ++;
+        if (vowels.includes(letter)){ //ищем каждую гласную в созданном массиве
+        num ++;  //если нашли увеличиваем счетчик на 1
 }});
     return num; 
 }

@@ -11,9 +11,9 @@
 
 function isPrime(n) {
     if (n<=1){
-        return false;
+        return false; //числа меньше еденицы не являются простыми
     }
-    for(let i = 2; i * i <= n; i++){
+    for(let i = 2; i * i <= n; i++){ //цикл, где мы число n проверяем на кратность чисел от 2 до n
       if(n % i === 0) {
         return false;
         }
@@ -29,5 +29,5 @@ console.log(isPrime(2)); // true
 console.log(isPrime(3)); // true
 console.log(isPrime(6)); // false
 console.log(isPrime(17)); // true
-console.log(isPrime(997));
-console.log(isPrime(998));
+console.log(isPrime(997)); // true
+console.log(isPrime(998)); // false

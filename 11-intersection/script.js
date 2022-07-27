@@ -9,14 +9,14 @@
 
 function intersection(arr1, arr2) {
     const arr = [];
-        arr1.every(function(num) {
-            let search = arr2.includes(num);
-            if (search){
+        arr1.every(function(num) { //проверяем каждый елемент в массиве
+            let search = arr2.includes(num); //проверка: есть ли эл-т из второго массива в первом
+            if (search){ //если есть, то записываем его в итоговый массив
             arr.push(num);
             }
             return true;                
         });
-        const array = arr.filter((num, index) => {
+        const array = arr.filter((num, index) => { //фильтриуем итоговый массив, чтобы в нем остались только уникальные числа
             return index === arr.indexOf(num);
           });
         return array;

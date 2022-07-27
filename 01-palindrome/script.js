@@ -14,9 +14,9 @@
 */
 
 function palindrome(str) {
-    const str1 = str.replace(/[^a-zа-яё]/gi, '');
-    const reverseline = str1.split('').reverse().join('');
-    if (str1.toLowerCase() === reverseline.toLowerCase()) {
+    const str1 = str.replace(/[^a-zа-яё]/gi, ''); //удаляем пробелы и знаки препинания 
+    const reverseline = str1.split('').reverse().join(''); //преобразовали строки в массив, перевернули его и вернули в строку
+    if (str1.toLowerCase() === reverseline.toLowerCase()) { //сравнили итоговый результат с вводными данными
         return true;
     } else{
         return false;
