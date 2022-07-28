@@ -11,13 +11,11 @@
 function fibonacci(n) {
     const arr = []; //соберем в массив все числа Фибоначчи
     for (let i = 0; i < n; i++){
-        let num;
         if (i==0 || i==1) { //первые числа 0 и 1 переносим в массив
-            num=i;
-            arr.push(num);
+            arr.push(i);
         }
         if (i>1) { //остальные числа>1 вычисляем, суммируя два числа перед ним
-        num = arr[i-2]+arr[i-1];
+        let num = arr[i-2]+arr[i-1];
         arr.push(num);
         }
    }

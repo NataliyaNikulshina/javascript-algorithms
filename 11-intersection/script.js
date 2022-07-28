@@ -10,7 +10,7 @@
 function intersection(arr1, arr2) {
     const arr = [];
         arr1.every(function(num) { //проверяем каждый елемент в массиве
-            let search = arr2.includes(num); //проверка: есть ли эл-т из второго массива в первом
+            const search = arr2.includes(num); //проверка: есть ли эл-т из второго массива в первом
             if (search){ //если есть, то записываем его в итоговый массив
             arr.push(num);
             }

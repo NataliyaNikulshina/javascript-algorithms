@@ -7,7 +7,7 @@
 */
 
 function countZeros(n) {
-    let res = [];
+    const res = [];
     let count = 0;
       for (let i=2; i<=n; i++){
         if (i.toString().includes('0')) {
